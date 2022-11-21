@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- main css -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/images/astronweb logo.png" type="image/x-icon">
+
+  <!-- this JavaScript file contain all essential code for the quiz game -->
+  <script src="script.js" defer></script>
+
+  <title>Astronweb</title>
+</head>
+<body>
+  <div id="main-container">
+    <!-- homepage start-->
+    <div class="home-page">
+      <div class="logo">
+        <img class="astronweb-logo" src="images/astronweb logo.png" alt="astronweb-logo">
+      </div>
+      <div class="homepage-buttons">
+        <button id="play-now-btn" onclick="playNow()">Play Now</button>
+        <a href="about.html"><button id="about-btn">About</button></a>
+      </div>
+    </div>
+
+    <!-- homepage end -->
+    
+    <!-- instruction box start-->
+    <div class="instruction-box">
+        <div class="instruction-title"><span>Instructions</span></div>
+        <div class="instruction-list">
+            <div class="instruction">1. The quiz consists of multiple-choice and true or false questions.</div>
+            <div class="instruction">2. This quiz is not time-pressured.</div>
+            <div class="instruction">3. You can't select any option once you answered.</div>
+            <div class="instruction">4. You can't exit from the quiz while you're playing.</div>
+            <div class="instruction">5. You'll get one point per correct answer.</div>
+        </div>
+        <div class="buttons">
+            <a class="next-btn" href="quiz.html" onclick="nextButton()">Next</a>
+        </div>
+    </div>
+    <!-- instruction box end -->
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+/* importing Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+/* tailwind font */
+@font-face {
+  font-family: Tailwind;
+  src: url('/fonts/Tailwind\ Regular.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+#main-container {
+  background-image: url(/images/home-page-bg.png);
+  background-size: cover;
+}
+
+/* homepage start */
+.home-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.astronweb-logo {
+  height: 35vh;
+  margin: 10vh 0 15vh;
+}
+
+.homepage-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#play-now-btn {
+  background-color: #6949FE;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  padding: 0.35em 2em;
+}
+
+#play-now-btn, #about-btn {
+  font-size: 2rem;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1em;
+  outline: none;
+}
+
+#about-btn {
+  background-color: transparent;
+  border: 2px solid #6949FE;
+  color: #FFFFFF;
+  padding: 0.35em 2.75em;
+  text-decoration: none;
+}
+
+#play-now-btn:hover, #about-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+/* homepage end */
+
+/* instructions start */
+.instruction-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.instruction-box.activeInfo {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.instruction-box {
+  padding: 1rem;
+  width: 850px;
+  line-height: 2.25rem;
+  background: #32167d;
+  border-radius: 10px;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.instruction-box .instruction-title {
+  font-family: Tailwind;
+  font-size: 3rem;
+  color: #37e9bb;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 5px 5px 0 0;
+}
+
+.instruction-box .instruction-list {
+  padding: 15px 30px;
+}
+
+.instruction-box .instruction-list .instruction {
+  margin: 5px 0;
+  font-size: 17px;
+  color: #FFFFFF;
+  font-family: Tailwind;
+  font-size: 1.75rem;
+}
+
+.instruction-box .instruction-list .instruction span{
+  font-weight: 600;
+  color: #007bff;
+}
+
+.instruction-box .buttons{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30px;
+}
+
+.next-btn{
+  margin: 0 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background-color: #6949fe;
+  color: #FFFFFF;
+  padding: 0.35em 1.25em;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+.next-btn:hover {
+  transform: scale(1.05);
+}
+
+/* questions start */
+.questions-container {
+  background-image: url(images/quiz-page-bg.png);
+  width: 100vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 530px) {
+  .astronweb-logo {
+    height: 280px;
+    width: 500px;
+    margin: 10vh 0 15vh;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 530px) {
+  body {
+    overflow-y: hidden;
+  }
+
+  .astronweb-logo {
+    height: 35vh;
+    width: 90vw;
+    margin: 10vh 0 15vh;
+  }
+}

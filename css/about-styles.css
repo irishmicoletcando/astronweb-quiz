@@ -1,0 +1,135 @@
+/* importing Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+/* tailwind font */
+@font-face {
+  font-family: Tailwind;
+  src: url('/fonts/Tailwind\ Regular.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url(/images/quiz-page-bg.png);
+  background-size: cover;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/* body {
+  transition: all 0.5s ease;
+} */
+
+.about-page {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  animation: transitionIn 0.75s;
+}
+
+.about-page h1{
+  font-size: 2.5rem;
+  font-family: "Poppins", "sans-serif";
+  font-weight: 700;
+  color: #37e9bb;
+  text-align: center;
+  margin-top: .5em;
+}
+
+.arrow-right{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 3%;
+  top: 5%;
+  background-color: #32167d;
+  border-radius: 50%;
+  box-shadow: 5px 3px 10px -3px black;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  animation: transitionIn 0.75s;
+}
+
+.arrow-right img{
+  width: 70%;
+  margin: 1%;
+  position: relative;
+  left: 16%;
+  top: 13%;
+  filter: invert(76%) sepia(21%) saturate(1371%) hue-rotate(108deg) brightness(105%) contrast(83%);
+}
+
+.arrow-right:hover{
+  transform: scale(1.05);
+}
+
+.members-container{
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  position: absolute;
+  left: 14%;
+  top: 10vh;
+}
+
+.members {
+  color: #fff;
+  font-family: "Tailwind";
+  text-align: center;
+  background-color: #32167d;
+  margin: 1rem;
+  padding: 1.5rem 0rem;
+  border-radius: 18px;
+  box-shadow: 5px 5px 5px 0px black;
+  transition: 0.2s all ease-in-out;
+}
+
+.members img{
+  width: 30%;
+  border-radius: 50%;
+  box-shadow: 5px 3px 10px -1px black;
+}
+
+.members:hover{
+  transform: scale(1.02);
+}
+
+.members-container #name,
+.members-container #role,
+.members-container p{
+  font-weight: 400;
+  margin: 0.15rem 0;
+}
+
+.members-container #name{
+  color: #37e9bb;
+  font-size: 1.75rem;
+}
+
+.members-container #role{
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.members-container p{
+  font-size: 0.75rem;
+}
+
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  } 
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
